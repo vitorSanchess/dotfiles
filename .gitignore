@@ -1,0 +1,6 @@
+# Ignore runtime backups and buffers
+micro/.config/micro/backups/
+micro/.config/micro/buffers/
+*.swp
+*.bak
+.DS_Store

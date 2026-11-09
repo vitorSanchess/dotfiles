@@ -1,0 +1,9 @@
+// Applications started with the Niri session.
+// Keep one startup entry per application.
+
+spawn-at-startup "noctalia" "--daemon"
+
+// Keep the user's existing nvibrant parameters.
+spawn-at-startup "nvibrant" "0" "0" "0" "0" "420" "0"
+
+spawn-at-startup "discord"

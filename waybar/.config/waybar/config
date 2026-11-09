@@ -1,0 +1,56 @@
+{
+  "layer": "top",
+  "position": "top",
+  "margin-top": 5,
+  "margin-bottom":2,
+  "margin-left": 15,
+  "margin-right": 15,
+  "height": 28,
+  "spacing": 8,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "tray",
+    "cpu",
+    "memory",
+    "hyprland/language",
+    "pulseaudio",
+    "custom/power"
+  ],
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "timezone": "America/Sao_Paulo"
+  },
+  "cpu": {
+    "format": "  {usage}%"
+  },
+  "memory": {
+    "format": "  {used:0.1f}G/{total:0.1f}G"
+  },
+  "hyprland/language": {
+    "format": "{short}"
+  },
+  "tray": {
+    "spacing": 10
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "wlogout",
+    "tooltip": false
+  },
+
+    "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "✖",
+    "format-icons": ["", "", ""],
+    "scroll-step": 5,
+    "on-click": "~/.local/bin/pavucontrol-popup",
+    "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+  },
+
+    "escape": true,
+    "exec": "~/.config/waybar/scripts/mediaplayer.py",
+  }
+}
